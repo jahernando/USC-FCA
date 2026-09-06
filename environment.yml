@@ -1,9 +1,32 @@
-name: USC-FC
+# Entorno del curso — Física Computacional Avanzada (USC)
+#
+#   conda env create -f environment.yml
+#   conda activate fca
+#
+name: fca
 channels:
   - conda-forge
 dependencies:
-  - jupyter
-  - rise
+  - python=3.13
+  # Jupyter
+  - jupyterlab
+  - notebook
+  - nbconvert
+  - ipywidgets
+  - jupyterlab_rise        # slides; el paquete `rise` clásico no funciona con Jupyter 7
+  # Stack científico
   - numpy
-  - matplotlib
   - scipy
+  - matplotlib
+  - seaborn
+  - pandas
+  - sympy
+  # Testing
+  - pytest
+  - hypothesis
+  # Libro (jupyter-book 2, basada en MyST)
+  - jupyter-book
+  # Higiene del repo: elimina los outputs de los .ipynb al hacer commit.
+  # Activarlo una vez por clon:  nbstripout --install --attributes .gitattributes
+  - nbstripout
+  - pip
