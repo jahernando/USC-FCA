@@ -27,11 +27,17 @@ The notebooks are also the slides used in class: the environment includes
 
 ## Contributing
 
-Notebook outputs are not kept under version control. If you are going to commit to
-this repository, enable the filter once per clone, after activating the environment:
+Students do not need this section.
+
+Notebook outputs are not kept under version control: they carry the absolute paths of
+whoever ran them. If you are going to commit to this repository, install the filter once
+per clone:
 
 ```bash
+conda install -c conda-forge nbstripout
 nbstripout --install --attributes .gitattributes
 ```
 
-Your local copies keep their outputs; git stores the notebooks without them.
+Your local copies keep their outputs; git stores the notebooks without them. The book is
+therefore built by executing the notebooks, which happens on a clean machine in
+`.github/workflows/book.yml`.
