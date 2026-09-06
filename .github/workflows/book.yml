@@ -1,0 +1,61 @@
+name: Build and deploy the book
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Notebook outputs are not versioned (see .gitattributes), so the book is
+# executed here, on a clean machine. That is also why no path in it is anyone's.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  BASE_URL: /${{ github.event.repository.name }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - uses: actions/checkout@v4
+
+      # The UNIX notebook calls `man ls`, which a bare runner does not have.
+      - name: Install the manual pages
+        shell: bash
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq man-db manpages bsdextrautils
+          sudo mandb -q || true
+
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          environment-file: environment.yml
+          activate-environment: fca
+          miniforge-version: latest
+          use-mamba: true
+
+      - name: Build the book
+        run: jupyter-book build --html --execute --strict
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _build/html
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

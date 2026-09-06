@@ -1,0 +1,26 @@
+version: 1
+
+project:
+  id: usc-fca-book
+  title: Advanced Computational Physics
+  subtitle: UNIX and git
+  description: >
+    Lecture notes on the shell and on version control, from the course on
+    Advanced Computational Physics of the Physics Master of the Universidade
+    de Santiago de Compostela.
+  authors:
+    - name: J. A. Hernando Morata
+      affiliations:
+        - Universidade de Santiago de Compostela
+  github: https://github.com/jahernando/USC-FCA
+  toc:
+    - file: README.md
+    - title: UNIX
+      file: fca_unix.ipynb
+    - title: git
+      file: fca_git.ipynb
+
+site:
+  template: book-theme
+  options:
+    logo_text: FCA

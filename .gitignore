@@ -4,3 +4,6 @@ hello.sh
 
 # Jupyter
 .ipynb_checkpoints/
+
+# MyST / jupyter-book
+_build/
