@@ -2,6 +2,10 @@
 unix_sandbox/
 hello.sh
 
+# Scratch produced by fca_git.ipynb
+git_sandbox/
+git_clone/
+
 # Jupyter
 .ipynb_checkpoints/
 
