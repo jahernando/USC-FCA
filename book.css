@@ -1,0 +1,22 @@
+/* Boxes of the notebooks: <div class="admonition ..."> written in raw HTML, so that the
+   same cell reads well in Jupyter, in RISE and here. */
+div.admonition {
+  margin: 1.2em 0;
+  padding: 0.6em 1em;
+  border-left: 4px solid #2a7ab0;
+  border-radius: 4px;
+  background: rgba(42, 122, 176, 0.07);
+}
+div.admonition.tip       { border-left-color: #2e8b57; background: rgba(46, 139, 87, 0.08); }
+div.admonition.important { border-left-color: #c0392b; background: rgba(192, 57, 43, 0.07); }
+div.admonition.hint      { border-left-color: #d68910; background: rgba(214, 137, 16, 0.08); }
+div.admonition.note      { border-left-color: #6c5ce7; background: rgba(108, 92, 231, 0.07); }
+div.admonition p.admonition-title { margin-top: 0; }
+
+details {
+  margin: 0.8em 0;
+  padding: 0.4em 1em;
+  border: 1px solid rgba(127, 127, 127, 0.35);
+  border-radius: 4px;
+}
+details > summary { cursor: pointer; }
