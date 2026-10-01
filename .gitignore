@@ -11,3 +11,10 @@ git_clone/
 
 # MyST / jupyter-book
 _build/
+
+# Scratch produced by about_testing.ipynb
+fca_stats.py
+test_fca_stats.py
+.pytest_cache/
+.hypothesis/
+__pycache__/
