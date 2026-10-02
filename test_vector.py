@@ -6,7 +6,7 @@ Created on Tue Oct 11 11:46:34 2022
 @author: hernando
 """
 
-from vector import Vector
+from nvector import Vector
 import random
 #import pytest as pt
 

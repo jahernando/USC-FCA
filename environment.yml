@@ -21,6 +21,8 @@ dependencies:
   - seaborn
   - pandas
   - sympy
+  # Physics: Lorentz vectors (Scikit-HEP)
+  - vector
   # Testing
   - pytest
   - hypothesis

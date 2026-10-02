@@ -24,15 +24,16 @@ project:
       children:
         - file: python_intro.ipynb
         - file: about_functions.ipynb
+        - file: about_testing.ipynb
         - file: about_list_expressions.ipynb
         - file: about_iterators.ipynb
-        - file: about_testing.ipynb
     - title: "Python: object-oriented programming"
       children:
         - file: fca_classes.ipynb
         - file: classes_intro.ipynb
         - file: classes.ipynb
         - file: classes_inheritance.ipynb
+        - file: fp_or_oop.ipynb
 
 site:
   template: book-theme
