@@ -31,7 +31,6 @@ project:
       children:
         - file: classes_intro.ipynb
         - file: classes.ipynb
-        - file: fca_classes.ipynb
         - file: classes_inheritance.ipynb
         - file: fp_or_oop.ipynb
 
