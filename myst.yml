@@ -29,9 +29,9 @@ project:
         - file: about_iterators.ipynb
     - title: "Python: object-oriented programming"
       children:
-        - file: fca_classes.ipynb
         - file: classes_intro.ipynb
         - file: classes.ipynb
+        - file: fca_classes.ipynb
         - file: classes_inheritance.ipynb
         - file: fp_or_oop.ipynb
 
