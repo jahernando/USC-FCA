@@ -20,6 +20,7 @@ dependencies:
   - matplotlib
   - seaborn
   - pandas
+  - pytables               # HDF5 files from pandas
   - sympy
   # Physics: Lorentz vectors (Scikit-HEP)
   - vector
