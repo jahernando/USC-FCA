@@ -35,7 +35,8 @@ project:
         - file: fp_or_oop.ipynb
     - title: "Scientific libraries"
       children:
-        - file: numpy_scipy.ipynb
+        - file: numpy.ipynb
+        - file: scipy.ipynb
         - file: pandas1.ipynb
         - file: pandas2.ipynb
         - file: sympy.ipynb
