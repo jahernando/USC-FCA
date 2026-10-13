@@ -21,3 +21,6 @@ __pycache__/
 
 # Scratch produced by about_iterators.ipynb
 events.txt
+
+# Teacher-only solutions (the repository is public)
+solutions/
