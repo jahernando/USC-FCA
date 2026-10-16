@@ -16,6 +16,8 @@ project:
   github: https://github.com/jahernando/USC-FCA
   toc:
     - file: README.md
+    - file: setup.ipynb
+      title: Getting started
     - title: "Tools: UNIX and git"
       children:
         - file: fca_unix.ipynb

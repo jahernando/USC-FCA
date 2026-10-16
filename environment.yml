@@ -15,11 +15,11 @@ dependencies:
   - ipywidgets
   - jupyterlab_rise        # slides; the classic `rise` package does not work with Jupyter 7
   # Scientific stack
-  - numpy
-  - scipy
+  - numpy>=2               # numpy 2 API
+  - scipy>=1.15            # bootstrap(rng=), sph_harm_y
   - matplotlib
   - seaborn
-  - pandas
+  - pandas>=3              # Copy-on-Write, str dtype
   - pytables               # HDF5 files from pandas
   - sympy
   # Physics: Lorentz vectors (Scikit-HEP)

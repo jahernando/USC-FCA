@@ -22,6 +22,10 @@ conda activate fca
 jupyter lab
 ```
 
+The notebooks need **numpy ≥ 2, scipy ≥ 1.15 and pandas ≥ 3**: use the `fca`
+environment, not an older one. If the installation fails, or Jupyter does not find the
+environment, see the help at the end of [Getting started](./setup.ipynb).
+
 The notebooks are also the slides used in class: the environment includes
 `jupyterlab_rise`, so any notebook can be presented with **Alt-R**.
 
