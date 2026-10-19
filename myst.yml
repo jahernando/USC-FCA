@@ -43,6 +43,9 @@ project:
         - file: pandas2.ipynb
         - file: sympy.ipynb
         - file: concurrency_parallelism.ipynb
+    - title: "Group exercise"
+      children:
+        - file: exercise_bsmumu.md
 
 site:
   template: book-theme
